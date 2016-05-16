@@ -1,0 +1,552 @@
+// Pixel-size
+$icon-size: 34px;
+$header-margin-top: 26px;
+$border-radius-btn: 60000px;
+
+// Colors
+$blue-one: #076fd0;
+$orange-one: #ff9900;
+$white: #fff;
+$btn-standard: #06e0d9;
+$btn-sp: #ffa300;
+$blue-dark: #085dac;
+$blue-tab: #05d9d1;
+$gray-one: #666;
+// Reset
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+.wrapper{
+	width: 1148px;
+	margin: 0 auto;
+}
+
+// Header
+header.main{
+	height: 90px;
+	background-color: #fff;
+	position: relative;
+	.wrapper{
+	
+		aside{
+			a{
+				float: left;
+				font-size: $icon-size;
+				position: relative;
+				color: $blue-one;
+				margin-top: $header-margin-top;
+			}
+	
+			a{
+				position: relative;
+				img{
+					position: absolute;
+					top: -15px;
+					margin-left: 20px;
+				}
+			}
+			
+
+			p{
+				color: $blue-one;
+				float: left;
+				margin-left: 150px;
+				width: 150px;
+				margin-top: 27px;
+			}
+		}
+
+		nav{
+
+			ul{
+				float: right;
+				li{
+					float: right;
+					line-height: 90px;
+					a{
+						color: $blue-one;
+						text-transform: capitalize;
+						margin-right: 45px;
+					}
+				
+					&:first-child{
+						a{
+							color: $orange-one;
+							border: 1px solid $orange-one;
+							border-radius: $border-radius-btn;
+							padding: 10px 25px;
+						}
+					}
+					
+				}
+			}
+		}
+	}
+}
+
+// Hero
+section.hero{
+	height: 540px;
+	background: url("../images/hero.png") no-repeat center;
+	
+	.wrapper{
+
+		section{
+
+			width: 50%;
+			height: 500px;
+			float: left;
+			padding: 100px 0;
+
+			h1{
+				font-size: 36px;
+				font-family: "Raleway";
+				color: $white;
+				font-weight: bold;
+				width: 80%;
+				margin-bottom: 25px;
+			}
+
+			
+
+			h2{
+				width: 75%;
+				font-size: 18px;
+				font-family: "Raleway";
+				color: $white;
+				font-weight: bold;
+			}
+
+			nav{
+				margin-top: 40px;
+				a{
+					float: left;
+					margin-right: 15px;
+				}
+			}
+		}
+
+		div{
+			width: 50%;
+			background: green;
+			float: right;
+			position: relative;
+
+			img{
+				position: absolute;
+				right: -20px;
+				top: 50px;
+			}
+		}
+
+	}
+}
+
+// Download & Reviews
+
+.contain{
+	background: url("../images/girl-white-bg.png") no-repeat center;
+	.wrapper{
+		position: relative;
+		.download{
+			height: 115px;
+
+			h1{
+				font-size: 16px;
+				font-family: "Raleway";
+				color: #0662a6;
+				padding: 15px 0;
+			}
+
+			ul{
+				display: inline-block;
+				li{
+					float: left;
+					box-shadow: 5px -2px 5px rgba(0, 0, 0, 0.03);
+					margin-right: 15px;
+
+					a{
+						
+					}
+				}
+			}
+
+			.contact-sm{
+				position: absolute;
+				height: 150px;
+				width: 190px;
+				right: 0;
+				top: -50px;
+
+				*{
+					text-align: left;
+				}
+
+				p{
+					font-size: 16px;
+					font-family: "Oswald";
+					color: $white;
+					padding-top: 15px;
+
+					&:after{
+
+					}
+				}
+
+				ul{
+					position: absolute;
+					bottom: 0;
+
+					li{
+						margin-bottom: 15px;
+						font-size: 12px;
+						font-family: "Oswald";
+						color: $blue-one;
+
+						&:before{
+							content: ':)';
+							margin-right: 10px;
+						}
+						&:last-child{
+							margin-bottom: 0;
+							font-size: 24px;
+						}
+					}
+
+
+				}
+			}
+			
+		}
+
+
+
+		.reviews{
+			height: 620px;
+			width: 100%;
+
+			aside, article{
+				margin: 140px 0;
+			}
+
+			aside{
+				float: left;
+				width: 240px;
+				height: 270px;
+				margin-right: 53px;
+				text-align: right;
+
+				h1{
+					font-size: 30px;
+					font-family: "Oswald";
+					color: $blue-one;
+					margin-bottom: 10px;
+				}
+
+				h2{
+					font-size: 14px;
+					font-family: "Roboto";
+					color: $orange-one;
+					margin-bottom: 10px;
+				}
+	
+				nav{
+					a{
+						
+						i{
+							
+						}
+						
+					}
+				}
+
+			}
+
+			article.customer{
+				float: left;
+				height: 265px;
+				width: 265px;
+				border: 1px solid #dfe6f0;
+				border-radius: 3px;
+				position: relative;
+				margin-right: 30px;
+
+				p{
+					margin: 0 auto;
+
+					&:first-child{
+						padding: 45px 0;
+						font-size: 14px;
+						font-family: "Raleway";
+						color: $blue-one;
+						text-align: center;
+						width: 90%;
+					}
+				}
+	
+				div:first-of-type{
+					position: absolute;
+					bottom: 0px;
+					width: 100%;
+					img{
+						position: absolute;
+						bottom: -40px;
+						left: 97px;
+					}
+
+					i{
+						position: absolute;
+						right: 82px;
+						bottom: 13px;
+					}
+				}
+				
+				.nome-cliente{
+
+					width: 100%;
+					text-align: center;
+					position: absolute;
+					bottom: -100px;
+					
+					*{
+						font-size: 14px;
+						font-family: "Roboto";
+						color: $orange-one !important;
+					}
+
+
+					p{
+						font-weight: bold;
+						padding: 0;
+						padding-bottom: 2px;
+					}
+
+					span{
+						font-weight: 400;
+					}
+				}
+
+				&:last-child{
+					margin-right: 0;
+				}
+
+			}
+		}
+	}
+	
+}
+
+
+// Details
+.details{
+	height: 620px;
+	background: #f4f7f9;
+
+	.details-tab{
+		width: 100%;
+		background: $blue-dark;
+		height: 65px;
+		margin-bottom: 50px;
+		.wrapper{
+			nav{
+				ul{
+
+					li{
+						float: left;
+						line-height: 65px;
+						width: 190px;
+
+						a{
+							display: block;
+							width: 100%;
+							text-align: center;
+							color: $blue-tab;
+						}
+						
+						&:hover{
+							background: $blue-tab;
+							padding-bottom: 10px;
+							border-bottom-left-radius: 3px;
+							border-bottom-right-radius: 3px;
+							box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.4);
+							a{
+								color: $white;
+							}
+							
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.wrapper{
+		position: relative;
+		aside{
+
+			img{
+				position: absolute;
+				right: 0;
+			}
+		}
+
+		article{
+			width: 100%;
+			div{
+				&:first-child{
+					position: relative;
+					width: 50%;
+					img{
+						position: absolute;
+
+						&:last-child{
+							position: absolute;
+							left: 119px;
+							top: 66px;
+						}
+					}
+				}
+	
+				&:last-child{
+					height: 365px;
+					width: 50%;
+					float: right;
+					background: yellow;
+					padding-top: 160px;
+
+					h1{
+						font-size: 35px;
+						font-family: "Oswald";
+						color: $blue-dark;
+						margin-bottom: 20px;
+					}
+
+					h2{
+						font-size: 16px;
+						font-family: "Roboto";
+						color: $gray-one;
+					}
+
+					a{
+
+					}
+
+					nav{
+						a{
+
+						}
+					}
+				}
+			}
+
+			h1{
+
+			}
+
+			h2{
+
+			}
+
+			a{
+
+			}
+
+			nav{
+				a{
+
+				}
+			}
+		}
+
+		aside{
+			nav{
+				a{
+
+				}
+			}
+		}
+	}
+
+}
+
+
+
+
+
+// Reusable Classes
+.btn{
+	font-size: 15px;
+	font-family: "Roboto";
+	color: $white;
+	line-height: 45px;
+	display: block;
+	width: 210px;
+	text-align: center;
+	border-radius: $border-radius-btn;	
+
+	&.btn-standard{
+		background: $btn-standard;
+	}
+
+	&.sp{
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffa300+0,ff8f00+100 */
+		background: $btn-sp; /* Old browsers */
+		background: -moz-linear-gradient(left, $btn-sp 0%, #ff8f00 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left, $btn-sp 0%,#ff8f00 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right, $btn-sp 0%,#ff8f00 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$btn-sp', endColorstr='#ff8f00',GradientType=1 ); /* IE6-9 */
+		box-shadow: 3px 1px 15px $btn-sp;
+	}
+}
+
+.navigation{
+
+	a{
+		background: white;
+		border: 1px solid rgba(0, 0, 0, 0.2);
+		border-radius: 50%;
+		box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.05);
+		text-align: center;
+		color: $blue-one;
+
+		i{
+
+		}
+	}
+
+	&.navigation-small{
+		a{
+			margin-left: 5px;
+			display: inline-block; 
+			text-align: center;
+			i{
+				width: 25px;
+				height: 25px;
+				font-size: 10px;
+				padding-top: 7px;
+			}
+
+		}
+	}
+
+}
+
+i.fa-heart{
+	text-align: center;
+	height: 23px;
+	width: 23px;
+	border-radius: 50%;
+	background: #e30b61;
+	color: #fff;
+	padding-top: 6px;
+	padding-left: 1px;
+	font-size: 11px;
+}
