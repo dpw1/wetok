@@ -1,7 +1,7 @@
 @import 'reset';
 @import 'mixin';
 @import 'variables';
-
+@import 'fonts';
 
 .wrapper{
 	width: 1148px;
@@ -14,7 +14,11 @@ header.main{
 	background-color: #fff;
 	position: relative;
 	.wrapper{
-	
+
+		*{
+			
+		}
+
 		aside{
 			a{
 				float: left;
@@ -35,16 +39,17 @@ header.main{
 			
 
 			p{
-				color: $blue-one;
+				@include font("Raleway-Regular", 16px, $blue-one, bold);
+				line-height: 145%;
 				float: left;
 				margin-left: 150px;
-				width: 150px;
+				width: 160px;
 				margin-top: 27px;
 			}
 		}
 
 		nav{
-
+			@include font("Raleway-Regular", 14px, $blue-one, normal);
 			ul{
 				float: right;
 				li{
@@ -130,23 +135,8 @@ section.hero{
 		.download{
 			height: 115px;
 
-			h1{
-                @include font("Raleway", 16px, $blue-dark, normal);
-				padding: 15px 0;
-			}
 
-			ul{
-				display: inline-block;
-				li{
-					float: left;
-					box-shadow: 5px -2px 5px rgba(0, 0, 0, 0.03);
-					margin-right: 15px;
 
-					a{
-						
-					}
-				}
-			}
 
 			.contact-sm{
 				position: absolute;
@@ -304,10 +294,12 @@ section.hero{
 
 // Details
 .details{
-	height: 750px;
+	height: 780px;
 	background: #f4f7f9;
     overflow: hidden;
-    box-shadow:0px -5px 20px #de1dde;
+
+    border: 0;
+    box-shadow: inset 0 -1px 20px -10px rgba(0, 0, 0, 0.5);
 	.details-tab{
 		width: 100%;
 		background: $blue-dark;
@@ -329,7 +321,7 @@ section.hero{
 							color: $blue-tab;
 						}
 						
-						&:hover{
+						&:hover,&.active{
 							background: $blue-tab;
 							padding-bottom: 10px;
 							border-bottom-left-radius: 3px;
@@ -349,7 +341,9 @@ section.hero{
 	.wrapper{
 		position: relative;
 		aside{
-
+			background-color: green;
+			background: url("../images/iphone-bg.png");
+			background-position: -300px 200px;
 			img{
 				position: absolute;
 				right: 0;
@@ -367,8 +361,8 @@ section.hero{
 
 						&:last-child{
 							position: absolute;
-							left: 119px;
-							top: 66px;
+							left: 0;
+							top: 20px;
 						}
 					}
 				}
@@ -410,32 +404,273 @@ section.hero{
 	}
 }
 
+// Background
+.background{
+	background: url("../images/boy.png") no-repeat center;
+}
+
 
 //Video
 
 .video{
     .wrapper{
-        h1{
-            
-        }
-        
-        ul{
-            li{
-                
-            }
-        }
+		
+    	article{
+    		float: left;            
+	        width: 400px;
+	        text-align: right;
+			padding-top: 60px;
+	        h1{
+	            @include font("Oswald", 32px, $blue-dark, bold);
+	            margin-bottom: 40px;
+	        }
+	        
+	        ul{
+	            li{
+	                @include font("Roboto", 14px, $gray-one, normal);
+					margin-bottom: 20px;
+
+	                &:before{
+
+	                }
+	            }
+	        }
+    	}
+
         
         div{
-            img{
-                
+        	
+        	float: right;
+        	position: relative;
+
+            > img{
+
+				position: absolute;
+			    left: -585px;
+			    top: -70px;
+			    z-index: 2;	
+            }
+
+            a{
+            	position: absolute;
+            	right: 0;
+            	top: -30px;
+            	z-index: 1;
+				
             }
             
-            video{
-                
-            }
         }
     }
 }
+
+.wrapper{
+	
+	&.download-container{
+
+		margin-top: 60px;
+		.download{
+			float: right;
+		}
+	}
+}
+
+// Contact
+
+.contact{
+	position: relative;
+	height: 575px;
+	width: 100%;
+	.half-left{
+		z-index: 3;
+		height: 630px;
+		background: url("../images/bg-orange.png") no-repeat;
+		background-size: cover;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 40%;
+
+		> img{
+			position: absolute;
+			left: 20px;
+			top: -80px;
+		}
+	}
+
+	.half-right{
+		height: 100%;
+		background: url("../images/bg-blue.png") no-repeat;
+		background-size: cover;
+		position: absolute;
+		right: 0px;
+		width: 60%;
+		z-index: 1;
+		padding: 80px 0;
+
+		.wrapper{
+			width: 80%;
+			h1{
+				@include font("Oswald",36px, $white, normal);
+			}
+			
+			h2{
+				@include font("Roboto", 16px, $white, normal);
+			}
+
+			nav{
+				padding-top: 40px;
+
+				a{
+					float: left;
+					margin-right: 15px;
+				}
+
+				&:after{
+					margin-top: 40px;
+					content:'';
+					display: block;
+					width: 500px;
+					height: 1px;
+					background: #07559d;
+				}
+			}
+
+			
+
+			ul{
+
+				&:first-of-type{
+					padding: 20px;
+					li{
+						@include font("Oswald", 22px, $white, bold);
+						display: inline-block;
+						margin-right: 20px;
+					
+						&:first-child{
+
+						}
+					}
+				}
+
+				&:last-of-type{
+					width: 100%;
+					margin-top: 40px;
+					li{
+
+						display: inline-block;
+						background: url("../images/social.png") no-repeat;
+						a{
+							display: block;
+							width: 35px;
+							height: 35px;
+						}
+
+						&:nth-child(1){
+							background-position: 0 0;
+
+							&:hover{
+								background-position: 0 $hover-y-value;
+							}
+						}
+
+						&:nth-child(2){
+							background-position: -42px 0;
+
+							&:hover{
+								background-position: -42px $hover-y-value;
+							}
+						}
+
+						&:nth-child(3){
+							background-position: -84px 0;
+
+							&:hover{
+								background-position: -84px $hover-y-value;
+							}
+						}
+
+						&:nth-child(4){
+							background-position: -126px 0;
+
+							&:hover{
+								background-position: -126px $hover-y-value;
+							}
+						}
+
+						&:nth-child(5){
+							background-position: -168px 0;
+
+							&:hover{
+								background-position: -168px $hover-y-value;
+							}
+						}
+					}
+				}
+			}
+
+			address{
+				width: 80%;
+				@include font("Raleway", 14px, $white, normal);
+			}
+		}
+	}
+
+}
+
+
+footer{
+	background: $white;
+	height: 55px;
+	width: 100%;
+	.wrapper{
+		a{
+
+			img{
+				margin: 0 auto;
+				margin-top: 35px;
+				margin-bottom: 20px;
+				display: block;
+				text-align: center;
+			}
+		}
+	}
+
+	div{
+		&.bottom{
+			div{
+				height: 7px;
+				width: 16.66%;
+				float: left;
+				&:nth-child(1){
+					background: #5d85a8;
+				}
+				&:nth-child(2){
+					background: #387aab;
+				}
+				&:nth-child(3){
+					background: #0376a0;
+				}
+				&:nth-child(4){
+					background: #034e6a;
+				}
+				&:nth-child(5){
+					background: #043142;
+				}
+				&:nth-child(6){
+					background: #042633;
+				}
+			}
+		}
+
+	}
+}
+
+
+
+
+
+
+
 
 
 
@@ -516,4 +751,29 @@ i.fa-heart{
 	padding-top: 6px;
 	padding-left: 1px;
 	font-size: 11px;
+}
+
+.download{
+	height: 115px;
+	h1{
+        @include font("Raleway", 16px, $blue-dark, normal);
+		padding: 15px 0;
+	}
+
+	ul{
+		display: inline-block;
+		li{
+			float: left;
+			box-shadow: 5px -2px 5px rgba(0, 0, 0, 0.03);
+			margin-right: 15px;
+
+			a{
+				
+			}
+		}
+	}
+}
+
+.clearfix{
+	clear: both;
 }
