@@ -91,13 +91,13 @@ section.hero{
 			padding: 100px 0;
 
 			h1{
-                @include font("Raleway", 36px, $white, bold);
+                @include font("Raleway-SemiBold", 36px, $white, bold);
 				width: 80%;
 				margin-bottom: 25px;
 			}
 
 			h2{
-                @include font("Raleway", 18px, $white, normal);
+                @include font("Raleway-SemiBold", 18px, $white, normal);
 				width: 75%;
 			}
 
@@ -150,7 +150,7 @@ section.hero{
 				}
 
 				p{
-                    @include font("Oswald", 16px, $white, normal);
+                    @include font("Oswald-Regular", 16px, $white, normal);
 					padding-top: 15px;
 
 					&:after{
@@ -163,7 +163,7 @@ section.hero{
 					bottom: 0;
 
 					li{
-                        @include font("Oswald", 12px, $blue-one, normal);
+                        @include font("Oswald-Regular", 12px, $blue-one, normal);
 						margin-bottom: 15px;
 
 						&:before{
@@ -200,12 +200,12 @@ section.hero{
 				text-align: right;
 
 				h1{
-                    @include font("Oswald", 30px, $blue-one, normal);
+                    @include font("Oswald-Regular", 30px, $blue-one, normal);
 					margin-bottom: 10px;
 				}
 
 				h2{
-                    @include font("Roboto", 14px, $orange-one, normal);
+                    @include font("Roboto-Regular", 14px, $orange-one, normal);
 					margin-bottom: 10px;
 				}
 	
@@ -234,8 +234,9 @@ section.hero{
 					margin: 0 auto;
 
 					&:first-child{
-                        @include font("Raleway", 14px, $blue-one, normal);
+                        @include font("Raleway-Regular", 14px, $blue-one, normal);
 						padding: 45px 0;
+						line-height: 22px;
 						text-align: center;
 						width: 90%;
 					}
@@ -266,7 +267,7 @@ section.hero{
 					bottom: -100px;
 					
 					*{
-                        @include font("Roboto", 14px, $orange-one !important, normal);
+                        @include font("Roboto-Regular", 14px, $orange-one !important, normal);
 					}
 
 
@@ -310,10 +311,11 @@ section.hero{
 				ul{
 
 					li{
+						@include font("Roboto-Medium", 14px, $white, normal);
 						float: left;
 						line-height: 65px;
 						width: 190px;
-
+			
 						a{
 							display: block;
 							width: 100%;
@@ -374,12 +376,12 @@ section.hero{
 					padding-top: 160px;
 
 					h1{
-                        @include font("Oswald", 36px, $blue-dark, normal);
+                        @include font("Oswald-Regular", 36px, $blue-dark, normal);
 						margin-bottom: 20px;
 					}
 
 					h2{
-                        @include font("Roboto", 16px, $gray-one, normal);
+                        @include font("Roboto-Regular", 16px, $gray-one, normal);
                         margin-bottom: 20px;
 					}
 
@@ -414,20 +416,21 @@ section.hero{
 
 .video{
     .wrapper{
-		
+		position: relative;
     	article{
     		float: left;            
 	        width: 400px;
 	        text-align: right;
 			padding-top: 60px;
+			overflow: hidden;
 	        h1{
-	            @include font("Oswald", 32px, $blue-dark, bold);
+	            @include font("Oswald-Regular", 32px, $blue-dark, normal);
 	            margin-bottom: 40px;
 	        }
 	        
 	        ul{
 	            li{
-	                @include font("Roboto", 14px, $gray-one, normal);
+	                @include font("Roboto-Regular", 14px, $gray-one, normal);
 					margin-bottom: 20px;
 
 	                &:before{
@@ -439,24 +442,27 @@ section.hero{
 
         
         div{
-        	
-        	float: right;
-        	position: relative;
+        	position: absolute;
+        	height: 440px;
+        	width: 660px;
+        	right: 0;
+        	top: -50px;
+			background: url("../images/video-shadow.png") no-repeat;
+			background-position: 0 400px;
 
             > img{
-
 				position: absolute;
-			    left: -585px;
-			    top: -70px;
-			    z-index: 2;	
+			    right: 500px;
+			    top: -60px;
+			    z-index: 3;	
+			    padding: 0;
+			    margin: 0;
             }
 
             a{
             	position: absolute;
-            	right: 0;
-            	top: -30px;
-            	z-index: 1;
-				
+				right: 0;
+            	z-index: 2;
             }
             
         }
@@ -510,11 +516,12 @@ section.hero{
 		.wrapper{
 			width: 80%;
 			h1{
-				@include font("Oswald",36px, $white, normal);
+				@include font("Oswald-Regular",36px, $white, normal);
+				margin-bottom: 15px;
 			}
 			
 			h2{
-				@include font("Roboto", 16px, $white, normal);
+				@include font("Roboto-Regular", 16px, $white, normal);
 			}
 
 			nav{
@@ -542,7 +549,7 @@ section.hero{
 				&:first-of-type{
 					padding: 20px;
 					li{
-						@include font("Oswald", 22px, $white, bold);
+						@include font("Oswald-Bold", 22px, $white, bold);
 						display: inline-block;
 						margin-right: 20px;
 					
@@ -610,7 +617,7 @@ section.hero{
 
 			address{
 				width: 80%;
-				@include font("Raleway", 14px, $white, normal);
+				@include font("Raleway-Regular", 14px, $white, normal);
 			}
 		}
 	}
@@ -676,7 +683,7 @@ footer{
 
 // Reusable Classes
 .btn{
-    @include font("Roboto", 14px, $white, normal);
+    @include font("Roboto-Medium", 14px, $white, normal);
 	line-height: 45px;
 	display: block;
 	width: 210px;
@@ -756,8 +763,8 @@ i.fa-heart{
 .download{
 	height: 115px;
 	h1{
-        @include font("Raleway", 16px, $blue-dark, normal);
-		padding: 15px 0;
+        @include font("Raleway-SemiBold", 16px, $blue-dark, normal);
+		padding: 20px 0;
 	}
 
 	ul{

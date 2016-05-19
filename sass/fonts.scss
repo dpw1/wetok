@@ -1,10 +1,18 @@
-@font-face {
-   font-family: 'Raleway-Regular';
-      src: url('../fonts/Raleway/Raleway-Regular.ttf');
-      src: url('../fonts/Raleway/Raleway-Regular.eot?#iefix') format('embedded-opentype'),
-           url('../fonts/Raleway/Raleway-Regular.woff') format('woff'),
-           url('../fonts/Raleway/Raleway-Regular.ttf') format('truetype'),
-           url('../fonts/Raleway/Raleway-Regular.svg#UbuntuItalic') format('svg');
-   font-weight: normal;
-   font-style: normal;
-}
+@import 'mixin';
+
+// Raleway
+@include font-face(Raleway-Regular, '../fonts/Raleway/Raleway-Regular', normal, normal);
+@include font-face(Raleway-Medium, '../fonts/Raleway/Raleway-Medium', normal, normal);
+@include font-face(Raleway-SemiBold, '../fonts/Raleway/Raleway-SemiBold', normal, normal);
+
+// Roboto
+@include font-face(Roboto-Regular, '../fonts/Roboto/Roboto-Regular', normal, normal);
+@include font-face(Roboto-Bold, '../fonts/Roboto/Roboto-Bold', normal, normal);
+@include font-face(Roboto-Medium, '../fonts/Roboto/Roboto-Medium', normal, normal);
+@include font-face(Roboto-Light, '../fonts/Roboto/Roboto-Light', normal, normal);
+
+// Oswald
+@include font-face(Oswald-Bold, '../fonts/Oswald/Oswald-Bold', normal, normal);
+@include font-face(Oswald-Regular, '../fonts/Oswald/Oswald-Regular', normal, normal);
+
+
