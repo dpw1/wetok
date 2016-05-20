@@ -186,7 +186,9 @@ section.hero{
 
 		.reviews{
 			height: 620px;
-			width: 100%;
+			*{
+				outline: 0;
+			}
 
 			aside, article{
 				margin: 140px 0;
@@ -208,85 +210,90 @@ section.hero{
                     @include font("Roboto-Regular", 14px, $orange-one, normal);
 					margin-bottom: 10px;
 				}
-	
+				
 				nav{
-					a{
-						
-						i{
-							
+					button{
+						&:first-of-type{
+							i{
+								
+							}
 						}
-						
 					}
 				}
 
 			}
 
-			article.customer{
-				float: left;
-				height: 265px;
-				width: 265px;
-				border: 1px solid #dfe6f0;
-				border-radius: 3px;
-				position: relative;
-				margin-right: 30px;
-
-				p{
-					margin: 0 auto;
-
-					&:first-child{
-                        @include font("Raleway-Regular", 14px, $blue-one, normal);
-						padding: 45px 0;
-						line-height: 22px;
-						text-align: center;
-						width: 90%;
-					}
-				}
-	
-				div:first-of-type{
-					position: absolute;
-					bottom: 0px;
-					width: 100%;
-					img{
-						position: absolute;
-						bottom: -40px;
-						left: 97px;
-					}
-
-					i{
-						position: absolute;
-						right: 82px;
-						bottom: 13px;
-					}
-				}
-				
-				.nome-cliente{
-
-					width: 100%;
-					text-align: center;
-					position: absolute;
-					bottom: -100px;
-					
-					*{
-                        @include font("Roboto-Regular", 14px, $orange-one !important, normal);
-					}
-
+			div{
+				z-index: 0;
+				article.customer{
+					float: left;
+					height: 265px;
+					width: 265px;
+					border: 1px solid #dfe6f0;
+					border-radius: 3px;
+					position: relative;
+					margin-right: 30px;
 
 					p{
-						font-weight: bold;
-						padding: 0;
-						padding-bottom: 2px;
+						margin: 0 auto;
+
+						&:first-child{
+	                        @include font("Raleway-Regular", 14px, $blue-one, normal);
+							padding: 45px 0;
+							line-height: 22px;
+							text-align: center;
+							width: 90%;
+						}
+					}
+		
+					div:first-of-type{
+						position: absolute;
+						bottom: 0px;
+						width: 100%;
+						img{
+							position: absolute;
+							bottom: -40px;
+							left: 97px;
+						}
+		
+						// Heart
+						i{
+							position: absolute;
+							right: 72px;
+							bottom: 13px;
+						}
+					}
+					
+					.nome-cliente{
+
+						width: 100%;
+						text-align: center;
+						position: absolute;
+						bottom: -100px;
+						
+						*{
+	                        @include font("Roboto-Regular", 14px, $orange-one !important, normal);
+						}
+
+
+						p{
+							font-weight: bold;
+							padding: 0;
+							padding-bottom: 2px;
+						}
+
+						span{
+							font-weight: 400;
+						}
 					}
 
-					span{
-						font-weight: 400;
+					&:last-child{
+						margin-right: 0;
 					}
-				}
 
-				&:last-child{
-					margin-right: 0;
 				}
-
 			}
+			
 		}
 	}
 	
@@ -370,36 +377,48 @@ section.hero{
 				}
 	
 				&:last-child{
-					height: 365px;
-					width: 50%;
-					float: right;
-					padding-top: 160px;
+					#slider-details{
+						height: 465px;
+						width: 50%;
+						float: right;
+						padding-top: 160px;
 
-					h1{
-                        @include font("Oswald-Regular", 36px, $blue-dark, normal);
-						margin-bottom: 20px;
+						div{
+							width: 100%;
+							h1{
+		                        @include font("Oswald-Regular", 36px, $blue-dark, normal);
+								margin-bottom: 20px;
+							}
+
+							h2{
+		                        @include font("Roboto-Regular", 16px, $gray-one, normal);
+		                        margin-bottom: 20px;
+							}
+
+							a{
+		                        
+		                        &.btn{
+		                            margin-bottom: 20px;
+		                            //FIXME: aplicar alpha na cor
+		                            //box-shadow: 1px 1px 15px $btn-standard;
+		                        }
+		                        
+							}
+
+
+						}
+
+
 					}
-
-					h2{
-                        @include font("Roboto-Regular", 16px, $gray-one, normal);
-                        margin-bottom: 20px;
-					}
-
-					a{
-                        
-                        &.btn{
-                            margin-bottom: 20px;
-                            //FIXME: aplicar alpha na cor
-                            //box-shadow: 1px 1px 15px $btn-standard;
-                        }
-                        
-					}
-
+					
 					nav{
-						a{
+						width: 50%;
+						float: right;
+						button{
 
 						}
 					}
+					
 				}
 			}
 		}
@@ -707,7 +726,16 @@ footer{
 
 .navigation{
 
-	a{
+	button{
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 5px 8px;
+		border-radius: 50%;
+		outline: 0;
+	}
+
+	a,button{
 		background: white;
 		border: 1px solid rgba(0, 0, 0, 0.2);
 		box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.08);
@@ -771,7 +799,7 @@ i.fa-heart{
 		display: inline-block;
 		li{
 			float: left;
-			box-shadow: 5px -2px 5px rgba(0, 0, 0, 0.03);
+			box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.1);
 			margin-right: 15px;
 
 			a{

@@ -26,6 +26,8 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css"/>
     <script>
         (function (b, o, i, l, e, r) {
             b.GoogleAnalyticsObject = l; b[l] || (b[l] =
@@ -104,49 +106,78 @@
                             <h1>A solução mais completa e customizável do mercado</h1>
                             <h2>Entenda porque somos a melhor opção para sua escola</h2>
                             <nav class="navigation navigation-small">
-                                <a href=""><i class="fa fa-chevron-left"></i></a>
-                                <a href=""><i class="fa fa-chevron-right"></i></a>
+                                <button id="prev-sm" role="button"><i class="fa fa-chevron-left"></i></button>
+                                <button id="next-sm" role="button"><i class="fa fa-chevron-right"></i></button>
                             </nav>
+
                         </aside>
                 
-                        <article class="customer">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa aspernatur molestias iusto exercitationem dolorum repellat atque assumenda fugit ab doloribus, sapiente labore quo ratione asperiores.</p>
-                            <div>
-                                <img src="images/foto-1.png" alt="Foto do cliente">
-                                <i class="fa fa-heart"></i>
-                            </div>
+                        <div id="slider-review">
+                            <article class="customer">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa aspernatur molestias iusto exercitationem dolorum repellat atque assumenda fugit ab doloribus, sapiente labore quo ratione asperiores.</p>
+                                <div>
+                                    <img src="images/foto-1.png" alt="Foto do cliente">
+                                    <i class="fa fa-heart"></i>
+                                </div>
+                            
+                                <div class="nome-cliente">
+                                    <p>Lucas Gonçalves Rosa</p>
+                                    <span>Pai do Davi</span>
+                                </div>
+                            </article>
 
-                            <div class="nome-cliente">
-                                <p>Lucas Gonçalves Rosa</p>
-                                <span>Pai do Davi</span>
-                            </div>
-                        </article>
+                            <article class="customer">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa aspernatur molestias iusto exercitationem dolorum repellat atque assumenda fugit ab doloribus, sapiente labore quo ratione asperiores.</p>
+                                <div>
+                                    <img src="images/foto-1.png" alt="Foto do cliente">
+                                    <i class="fa fa-heart"></i>
+                                </div>
+                            
+                                <div class="nome-cliente">
+                                    <p>Lucas Gonçalves Rosa</p>
+                                    <span>Pai do Davi</span>
+                                </div>
+                            </article>
+                            
+                            <article class="customer">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa aspernatur molestias iusto exercitationem dolorum repellat atque assumenda fugit ab doloribus, sapiente labore quo ratione asperiores.</p>
+                                <div>
+                                    <img src="images/foto-1.png" alt="Foto do cliente">
+                                    <i class="fa fa-heart"></i>
+                                </div>
+                            
+                                <div class="nome-cliente">
+                                    <p>Lucas Gonçalves Rosa</p>
+                                    <span>Pai do Davi</span>
+                                </div>
+                            </article>
+                            
+                            <article class="customer">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa aspernatur molestias iusto exercitationem dolorum repellat atque assumenda fugit ab doloribus, sapiente labore quo ratione asperiores.</p>
+                                <div>
+                                    <img src="images/foto-1.png" alt="Foto do cliente">
+                                    <i class="fa fa-heart"></i>
+                                </div>
+                            
+                                <div class="nome-cliente">
+                                    <p>Lucas Gonçalves Rosa</p>
+                                    <span>Pai do Davi</span>
+                                </div>
+                            </article>
 
-                        <article class="customer">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa aspernatur molestias iusto exercitationem dolorum repellat atque assumenda fugit ab doloribus, sapiente labore quo ratione asperiores.</p>
-                            <div>
-                                <img src="images/foto-1.png" alt="Foto do cliente">
-                                <i class="fa fa-heart"></i>
-                            </div>
-
-                            <div class="nome-cliente">
-                                <p>Lucas Gonçalves Rosa</p>
-                                <span>Pai do Davi</span>
-                            </div>
-                        </article>
-
-                        <article class="customer">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa aspernatur molestias iusto exercitationem dolorum repellat atque assumenda fugit ab doloribus, sapiente labore quo ratione asperiores.</p>
-                            <div>
-                                <img src="images/foto-1.png" alt="Foto do cliente">
-                                <i class="fa fa-heart"></i>
-                            </div>
-
-                            <div class="nome-cliente">
-                                <p>Lucas Gonçalves Rosa</p>
-                                <span>Pai do Davi</span>
-                            </div>
-                        </article>
+                            <article class="customer">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa aspernatur molestias iusto exercitationem dolorum repellat atque assumenda fugit ab doloribus, sapiente labore quo ratione asperiores.</p>
+                                <div>
+                                    <img src="images/foto-1.png" alt="Foto do cliente">
+                                    <i class="fa fa-heart"></i>
+                                </div>
+                            
+                                <div class="nome-cliente">
+                                    <p>Lucas Gonçalves Rosa</p>
+                                    <span>Pai do Davi</span>
+                                </div>
+                            </article>
+                        </div>
                 </section>
                 <!-- .REVIEWS END -->
 
@@ -185,14 +216,23 @@
                     </div>
 
                     <div>
-                        <h1>Agenda digital</h1>
-                        <h2>O App substitui a Agenda Escolar convencional com muitos recursos e benefícios para a escola e os pais. A Escola pode agendar reuniões, provas, trabalhos e lição de casa com uso de imagens e vídeos no próprio calendário.<br/><br/>
+                        <div id="slider-details">
+                            <div>
+                                <h1>Agenda digital</h1>
+                                <h2>O App substitui a Agenda Escolar convencional com muitos recursos e benefícios para a escola e os pais. A Escola pode agendar reuniões, provas, trabalhos e lição de casa com uso de imagens e vídeos no próprio calendário.<br/><br/>
+                                
+                                Os pais, podem acessar, a qualquer momento, os compromissos de seus filhos com riqueza de conteúdos, o que facilita o acompanhamento das atividades e a comunicação com a escola.</h2>
+                                <a href="#" class="btn btn-standard">Quero me conectar</a>
+                            </div>
+                        </div>
                         
-                        Os pais, podem acessar, a qualquer momento, os compromissos de seus filhos com riqueza de conteúdos, o que facilita o acompanhamento das atividades e a comunicação com a escola.</h2>
-                        <a href="#" class="btn btn-standard">Quero me conectar</a>
+                        <div class="clearfix"></div>
+
                         <nav class="navigation navigation-big">
-                            <a href=""><i class="fa fa-chevron-left"></i></a>
-                            <a href=""><i class="fa fa-chevron-right"></i></a>
+                            <button id="prev-lg" role="button"><i class="fa fa-chevron-left"></i></button>
+                            <button id="next-lg" role="button"><i class="fa fa-chevron-right"></i></button>
+                            <!-- <a href=""><i class="fa fa-chevron-left"></i></a>
+                            <a href=""><i class="fa fa-chevron-right"></i></a> -->
                         </nav>
                     </div>
                 </article>
@@ -314,5 +354,7 @@
         <!--SCRIPT-->
         <script type="text/javascript" src="scripts/vendor/jquery-2.1.4.min.js"></script>
         <script src="scripts/main.js"></script>
+        <script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+
     </body>
     </html>
